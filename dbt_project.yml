@@ -31,12 +31,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   project_dbt_stackoverflow:
     staging:
-      materialized: table
-      schema: staging #Concatenate with stackoverflow_, stackoverflow_staging
-      tags:
+      +materialized: table
+      +schema: staging #Concatenate with stackoverflow_, stackoverflow_staging
+      +tags:
         - staging
     marts:
-      materialized: table
-      schema: marts #Concatenate with stackoverflow_, stackoverflow_marts
-      tags:
+      +materialized: table
+      +schema: marts #Concatenate with stackoverflow_, stackoverflow_marts
+      +tags:
         - marts
